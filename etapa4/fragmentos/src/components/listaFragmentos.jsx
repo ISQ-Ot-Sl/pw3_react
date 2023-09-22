@@ -1,8 +1,9 @@
-const listaFragmentos = (motos) => {
+import './ListaFragmentos.css'
+const ListaFragmentos = ({ motos }) => {
   return (
    <>
-   <table>
-        <tr key = {itemMoto.id}>
+   <table className = "lf-table">
+        <tr>
             <th>Marca</th>
             <th>Modelo</th>
             <th>KM</th>
@@ -10,14 +11,19 @@ const listaFragmentos = (motos) => {
             <th>Ano</th>                     
         </tr>
         {motos.map((itemMoto) => {
-            <tr>
+            return(                
+            <tr key={itemMoto.id} style = 
+            {
+                itemMoto.id % 2 === 0 ?
+                {backgroundColor: "#ccc", color: "#000"} : null
+            }>
                 <td>{itemMoto.marca}</td>
                 <td>{itemMoto.modelo}</td>
                 <td>{itemMoto.km}</td>
                 <td>{itemMoto.usado ? "Usado" : "Novo"}</td>
                 <td>{itemMoto.ano}</td>
             </tr>
-
+            )
         })}
 
    </table>
@@ -26,4 +32,4 @@ const listaFragmentos = (motos) => {
   )
 }
 
-export default listaFragmentos
+export default ListaFragmentos
