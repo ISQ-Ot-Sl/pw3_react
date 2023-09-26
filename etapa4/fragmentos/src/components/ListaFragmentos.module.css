@@ -1,0 +1,23 @@
+.lf_table{
+    width: 100%;
+}
+
+.lf_red{
+    color: aliceblue;
+    background-color: red;
+}
+
+.lf_green{
+    color: black;
+    background-color: green;
+}
+
+.lf_blue{
+    color: aliceblue;
+    background-color: blue;
+}
+
+.lf_yellow{
+    color: black;
+    background-color: yellow;
+}
